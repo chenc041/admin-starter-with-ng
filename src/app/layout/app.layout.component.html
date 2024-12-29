@@ -1,0 +1,12 @@
+<div class="min-h-screen min-w-[var(--cc-min-width)] bg-[var(--cc-body-bg)]">
+  <app-header></app-header>
+  <main class="flex justify-between">
+    <app-sidebar [menus]="dataSource"></app-sidebar>
+    <div class="flex flex-col w-full h-[calc(100vh-var(--cc-header-height))]">
+      <div class="flex-1 h-[calc(100vh-var(--cc-header-height))] overflow-y-auto bg-white rounded-[20px] mb-2">
+        <router-outlet />
+      </div>
+      <div class="w-full text-center py-2">西瓜科技 © 2024</div>
+    </div>
+  </main>
+</div>

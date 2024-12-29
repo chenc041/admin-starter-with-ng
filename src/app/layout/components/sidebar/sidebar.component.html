@@ -1,0 +1,44 @@
+<aside
+  class="w-[var(--cc-aside-width)] h-[calc(100vh-var(--cc-header-height))] overflow-y-auto pr-4 pt-4 flex-shrink-0"
+>
+  @for (menu of menus; track menu.id) {
+    @if (!menu.children || !menu.children.length) {
+      <a
+        class="hover:bg-[var(--p-primary-hover-color)] hover:text-[var(--p-primary-contrast-color)] rounded-r-full py-2 pl-5 flex"
+        pRipple
+        routerLinkActive="bg-[var(--p-primary-color)]  text-[var(--p-primary-contrast-color)]"
+        [routerLink]="[menu.path]"
+        [routerLinkActiveOptions]="{
+          paths: 'exact',
+          queryParams: 'ignored',
+          matrixParams: 'ignored',
+          fragment: 'ignored',
+        }"
+      >
+        {{ menu.name | translate }}
+      </a>
+    } @else if (menu.children && menu.children.length) {
+      <div class="duration-100 rounded-r-full py-2 pl-5 flex">
+        {{ menu.name | translate }}
+      </div>
+      <div>
+        @for (child of menu.children; track child.id) {
+          <a
+            routerLinkActive="bg-[var(--p-primary-color)] text-[var(--p-primary-contrast-color)]"
+            class="hover:bg-[var(--p-primary-hover-color)] hover:text-[var(--p-primary-contrast-color)] bg-[var(--p-primary-color)] text-[var(--p-primary-contrast-color)] rounded-r-full py-2 pl-10 flex"
+            pRipple
+            [routerLink]="[menu.path, child.path]"
+            [routerLinkActiveOptions]="{
+              paths: 'exact',
+              queryParams: 'ignored',
+              matrixParams: 'ignored',
+              fragment: 'ignored',
+            }"
+          >
+            {{ child.name | translate }}
+          </a>
+        }
+      </div>
+    }
+  }
+</aside>
