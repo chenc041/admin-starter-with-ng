@@ -1,6 +1,7 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, isDevMode, provideZoneChangeDetection } from '@angular/core';
 import {
   provideRouter,
+  RouterFeatures,
   withComponentInputBinding,
   withDebugTracing,
   withInMemoryScrolling,
@@ -12,24 +13,35 @@ import { routes } from './app.routes';
 import { providePrimeNG } from 'primeng/config';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import Aura from '@primeng/themes/aura';
+import { provideServiceWorker } from '@angular/service-worker';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { loggingInterceptor } from '~/app/interceptors/logging.interceptor';
 
-export let appConfig: ApplicationConfig;
-appConfig = {
+const routeFeatures: RouterFeatures[] = [
+  withDebugTracing(),
+  withComponentInputBinding(),
+  withRouterConfig({
+    onSameUrlNavigation: 'reload',
+  }),
+  withInMemoryScrolling({
+    scrollPositionRestoration: 'enabled',
+    anchorScrolling: 'enabled',
+  }),
+];
+
+if (!isDevMode()) {
+  routeFeatures.push(withViewTransitions());
+}
+
+export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(
-      routes,
-      withComponentInputBinding(),
-      withViewTransitions(),
-      withDebugTracing(),
-      withRouterConfig({
-        onSameUrlNavigation: 'reload',
-      }),
-      withInMemoryScrolling({
-        scrollPositionRestoration: 'enabled',
-        anchorScrolling: 'enabled',
-      }),
-    ),
+    provideRouter(routes, ...routeFeatures),
+    provideServiceWorker('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
+    provideHttpClient(withInterceptors([loggingInterceptor])),
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {

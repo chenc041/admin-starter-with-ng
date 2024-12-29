@@ -1,25 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { Ripple } from 'primeng/ripple';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from '~/app/layout/components/header/header.component';
+import { Menu } from '~/app/interfaces/menu';
+import { SidebarComponent } from '~/app/layout/components/sidebar/sidebar.component';
 
-export interface Menu {
-  id: number;
-  name?: string;
-  path: string;
-  children?: Menu[];
-}
 @Component({
   selector: 'app-layout',
-  imports: [RouterLink, RouterOutlet, Ripple, RouterLinkActive],
+  imports: [RouterOutlet, HeaderComponent, SidebarComponent],
   templateUrl: './app.layout.component.html',
-  styleUrl: './app.layout.component.scss',
 })
 export default class AppLayoutComponent {
   dataSource: Menu[] = [
     {
       id: 1,
-      name: 'dashboard',
-      path: 'dashboard',
+      name: 'Dashboard',
+      path: '',
     },
     {
       id: 2,
@@ -28,8 +23,13 @@ export default class AppLayoutComponent {
       children: [
         {
           id: 1,
-          path: 'settings',
-          name: '设置',
+          path: 'log',
+          name: '系统日志',
+        },
+        {
+          id: 2,
+          path: 'dict',
+          name: '字典管理',
         },
       ],
     },

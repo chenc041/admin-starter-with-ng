@@ -1,40 +1,7 @@
 <div class="min-h-screen min-w-[var(--cc-min-width)] bg-[var(--cc-body-bg)]">
-  <div class="flex justify-between items-center px-4 h-[var(--cc-header-height)]">
-    <div class="text-[var(--cc-text-large)] text-black font-bold">西瓜科技</div>
-    <!--    <button [matMenuTriggerFor]="menu" mat-button>chenc</button>-->
-    <!--    <mat-menu #menu="matMenu">-->
-    <!--      <button mat-menu-item>用户中心</button>-->
-    <!--      <button mat-menu-item>退出登录</button>-->
-    <!--    </mat-menu>-->
-  </div>
+  <app-header></app-header>
   <main class="flex justify-between">
-    <aside
-      class="w-[var(--cc-aside-width)] h-[calc(100vh-var(--cc-header-height))] overflow-y-auto pr-4 pt-4 flex-shrink-0"
-    >
-      @for (menu of dataSource; track menu.id) {
-        @if (!menu.children || !menu.children.length) {
-          <a
-            class="hover:bg-[var(--cc-hover-bg)] bg-[var(--cc-menu-select)] text-[var(--cc-primary-text-color)] duration-100 rounded-r-full py-2 pl-5 flex"
-            pRipple
-            routerLinkActive="bg-[var(--menu-select)]"
-            [routerLink]="[menu.path]"
-          >
-            {{ menu.name }} ??
-          </a>
-        } @else if (menu.children && menu.children.length) {
-          @for (child of menu.children; track child.id) {
-            <a
-              routerLinkActive="bg-[var(--cc-menu-select)]"
-              class="hover:bg-[var(--cc-hover-bg)] text-[var(--cc-primary-text-color)] duration-100 rounded-r-full py-2 pl-5 flex"
-              pRipple
-              [routerLink]="[menu.path, child.path]"
-            >
-              {{ child.name }}
-            </a>
-          }
-        }
-      }
-    </aside>
+    <app-sidebar [menus]="dataSource"></app-sidebar>
     <div class="flex flex-col w-full h-[calc(100vh-var(--cc-header-height))]">
       <div class="flex-1 h-[calc(100vh-var(--cc-header-height))] overflow-y-auto bg-white rounded-[20px] mb-2">
         <router-outlet />

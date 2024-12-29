@@ -9,6 +9,19 @@ export const routes: Routes = [
         path: '',
         loadComponent: () => import('./dashboard/dashboard.component'),
       },
+      {
+        path: 'system',
+        children: [
+          {
+            path: 'log',
+            loadComponent: () => import('./system/log/log.component'),
+          },
+          {
+            path: 'dict',
+            loadComponent: () => import('./system/dict/dict.component'),
+          },
+        ],
+      },
     ],
   },
   {
