@@ -1,0 +1,30 @@
+<div class="bg-[var(--cc-body-bg)] h-screen w-screen flex flex-col items-center">
+  <div class="w-[560px] h-[600px] bg-white rounded-2xl px-10 mt-auto mb-auto shadow-gray-500">
+    <div class="text-center text-4xl font-bold pt-16 pb-4">西瓜科技</div>
+    <div class="text-center text-xl pb-14">欢迎来到西瓜科技</div>
+    <form (ngSubmit)="handleLogin()" [formGroup]="loginForm" class="w-full flex flex-col">
+      <label class="mb-2" for="email">邮箱</label>
+      <input class="mb-10" formControlName="email" id="email" pInputText placeholder="请输入邮箱地址" type="text" />
+      <label class="mb-2" for="password1">密码</label>
+      <p-password
+        [feedback]="true"
+        class="mb-10"
+        fluid
+        formControlName="password"
+        id="password1"
+        placeholder="请输入密码"
+        toggleMask
+      />
+
+      <div class="flex justify-between mb-12">
+        <div class="flex items-center">
+          <p-checkbox binary class="mr-2" formControlName="remember" id="remember"></p-checkbox>
+          <label class="text-[14px]" for="remember">记住我</label>
+        </div>
+        <a class="no-underline text-[var(--p-primary-color)]" href="">忘记密码?</a>
+      </div>
+      <p-button fluid label="登录" type="submit" />
+    </form>
+  </div>
+  <div class="w-full text-center py-2">西瓜科技 © 2024</div>
+</div>
