@@ -4,7 +4,7 @@
     <div class="text-center text-xl pb-14">欢迎来到西瓜科技</div>
     <form (ngSubmit)="handleLogin()" [formGroup]="loginForm" class="w-full flex flex-col">
       <label class="mb-2" for="email">邮箱</label>
-      <input class="mb-10" formControlName="email" id="email" pInputText placeholder="请输入邮箱地址" type="text" />
+      <input class="mb-10" formControlName="username" id="email" pInputText placeholder="请输入邮箱地址" type="text" />
       <label class="mb-2" for="password1">密码</label>
       <p-password
         [feedback]="true"

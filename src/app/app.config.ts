@@ -16,6 +16,7 @@ import Aura from '@primeng/themes/aura';
 import { provideServiceWorker } from '@angular/service-worker';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { loggingInterceptor } from '~/app/interceptors/logging.interceptor';
+import { authInterceptor } from '~/app/interceptors/auth.interceptor';
 
 const routeFeatures: RouterFeatures[] = [
   withDebugTracing(),
@@ -41,7 +42,7 @@ export const appConfig: ApplicationConfig = {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:30000',
     }),
-    provideHttpClient(withInterceptors([loggingInterceptor])),
+    provideHttpClient(withInterceptors([loggingInterceptor, authInterceptor])),
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {
