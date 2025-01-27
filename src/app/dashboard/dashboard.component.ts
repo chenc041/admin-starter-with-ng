@@ -4,6 +4,5 @@ import { Component } from '@angular/core';
   selector: 'app-dashboard',
   imports: [],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss',
 })
 export default class DashboardComponent {}

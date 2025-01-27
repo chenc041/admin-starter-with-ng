@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
+import { LoginService } from '~/app/auth/login/login.service';
 
 @Component({
   selector: 'app-login',
@@ -12,14 +13,17 @@ import { CheckboxModule } from 'primeng/checkbox';
   templateUrl: './login.component.html',
 })
 export default class LoginComponent {
+  loginService = inject(LoginService);
   loginForm: FormGroup = new FormGroup({
-    email: new FormControl('', [Validators.required]),
+    username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
-    remember: new FormControl<string | null>(null, [Validators.required]),
+    remember: new FormControl<boolean | null>(null, [Validators.required, Validators.requiredTrue]),
   });
 
   handleLogin(): void {
     const { valid, value } = this.loginForm;
-    console.log(value, valid, 'onLogin');
+    if (valid) {
+      this.loginService.login(value).subscribe((res) => console.log(res));
+    }
   }
 }

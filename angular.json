@@ -5,11 +5,7 @@
   "projects": {
     "admin-starter-with-ng": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,14 +13,16 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/admin-starter-with-ng",
+            "outputPath": {
+              "base": "dist",
+              "browser": ""
+            },
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
@@ -32,8 +30,9 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-              "src/var.scss"
+              "src/styles.css",
+              "src/var.css",
+              "node_modules/primeicons/primeicons.css"
             ],
             "scripts": []
           },
@@ -51,7 +50,8 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "serviceWorker": "ngsw-config.json"
             },
             "development": {
               "optimization": false,
@@ -90,7 +90,6 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
@@ -98,8 +97,9 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-              "src/var.scss"
+              "src/styles.css",
+              "src/var.css",
+              "node_modules/primeicons/primeicons.css"
             ],
             "scripts": []
           }
