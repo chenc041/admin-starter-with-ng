@@ -17,7 +17,7 @@ export default class LoginComponent {
   loginForm: FormGroup = new FormGroup({
     username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
-    remember: new FormControl<boolean | null>(null),
+    remember: new FormControl<boolean | null>(null, [Validators.required, Validators.requiredTrue]),
   });
 
   handleLogin(): void {

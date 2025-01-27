@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TableModule } from 'primeng/table';
-import { NgForOf } from '@angular/common';
+import { NgFor } from '@angular/common';
 
 interface Column {
   field: string;
@@ -9,9 +9,8 @@ interface Column {
 
 @Component({
   selector: 'app-log',
-  imports: [TableModule, NgForOf],
+  imports: [TableModule, NgFor],
   templateUrl: './log.component.html',
-  styleUrl: './log.component.scss',
 })
 export default class LogComponent {
   products = [
