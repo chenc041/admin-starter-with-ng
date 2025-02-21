@@ -98,7 +98,7 @@ importers:
         version: 2.1.0(jasmine-core@5.5.0)(karma-jasmine@5.1.0(karma@6.4.4))(karma@6.4.4)
       postcss:
         specifier: ^8.5.1
-        version: 8.5.1
+        version: 8.5.3
       prettier:
         specifier: 3.5.1
         version: 3.5.1
@@ -3878,8 +3878,8 @@ packages:
     resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.1:
-    resolution: {integrity: sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==}
+  postcss@8.5.3:
+    resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -6557,7 +6557,7 @@ snapshots:
       '@tailwindcss/node': 4.0.7
       '@tailwindcss/oxide': 4.0.7
       lightningcss: 1.29.1
-      postcss: 8.5.1
+      postcss: 8.5.3
       tailwindcss: 4.0.7
 
   '@tufjs/canonical-json@2.0.0': {}
@@ -7001,7 +7001,7 @@ snapshots:
       domhandler: 5.0.3
       htmlparser2: 9.1.0
       picocolors: 1.1.1
-      postcss: 8.5.1
+      postcss: 8.5.3
       postcss-media-query-parser: 0.2.3
 
   big.js@5.2.2: {}
@@ -7265,12 +7265,12 @@ snapshots:
 
   css-loader@7.1.2(webpack@5.97.1(esbuild@0.24.2)):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.5.1)
-      postcss: 8.5.1
-      postcss-modules-extract-imports: 3.1.0(postcss@8.5.1)
-      postcss-modules-local-by-default: 4.2.0(postcss@8.5.1)
-      postcss-modules-scope: 3.2.1(postcss@8.5.1)
-      postcss-modules-values: 4.0.0(postcss@8.5.1)
+      icss-utils: 5.1.0(postcss@8.5.3)
+      postcss: 8.5.3
+      postcss-modules-extract-imports: 3.1.0(postcss@8.5.3)
+      postcss-modules-local-by-default: 4.2.0(postcss@8.5.3)
+      postcss-modules-scope: 3.2.1(postcss@8.5.3)
+      postcss-modules-values: 4.0.0(postcss@8.5.3)
       postcss-value-parser: 4.2.0
       semver: 7.6.3
     optionalDependencies:
@@ -7907,9 +7907,9 @@ snapshots:
     dependencies:
       safer-buffer: 2.1.2
 
-  icss-utils@5.1.0(postcss@8.5.1):
+  icss-utils@5.1.0(postcss@8.5.3):
     dependencies:
-      postcss: 8.5.1
+      postcss: 8.5.3
 
   ieee754@1.2.1: {}
 
@@ -8810,26 +8810,26 @@ snapshots:
 
   postcss-media-query-parser@0.2.3: {}
 
-  postcss-modules-extract-imports@3.1.0(postcss@8.5.1):
+  postcss-modules-extract-imports@3.1.0(postcss@8.5.3):
     dependencies:
-      postcss: 8.5.1
+      postcss: 8.5.3
 
-  postcss-modules-local-by-default@4.2.0(postcss@8.5.1):
+  postcss-modules-local-by-default@4.2.0(postcss@8.5.3):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.5.1)
-      postcss: 8.5.1
+      icss-utils: 5.1.0(postcss@8.5.3)
+      postcss: 8.5.3
       postcss-selector-parser: 7.1.0
       postcss-value-parser: 4.2.0
 
-  postcss-modules-scope@3.2.1(postcss@8.5.1):
+  postcss-modules-scope@3.2.1(postcss@8.5.3):
     dependencies:
-      postcss: 8.5.1
+      postcss: 8.5.3
       postcss-selector-parser: 7.1.0
 
-  postcss-modules-values@4.0.0(postcss@8.5.1):
+  postcss-modules-values@4.0.0(postcss@8.5.3):
     dependencies:
-      icss-utils: 5.1.0(postcss@8.5.1)
-      postcss: 8.5.1
+      icss-utils: 5.1.0(postcss@8.5.3)
+      postcss: 8.5.3
 
   postcss-selector-parser@7.1.0:
     dependencies:
@@ -8844,7 +8844,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.1:
+  postcss@8.5.3:
     dependencies:
       nanoid: 3.3.8
       picocolors: 1.1.1
@@ -8978,7 +8978,7 @@ snapshots:
       adjust-sourcemap-loader: 4.0.0
       convert-source-map: 1.9.0
       loader-utils: 2.0.4
-      postcss: 8.5.1
+      postcss: 8.5.3
       source-map: 0.6.1
 
   resolve@1.22.10:
@@ -9550,7 +9550,7 @@ snapshots:
   vite@6.0.11(@types/node@22.13.4)(jiti@2.4.2)(less@4.2.1)(lightningcss@1.29.1)(sass@1.83.1)(terser@5.37.0)(yaml@2.6.1):
     dependencies:
       esbuild: 0.24.2
-      postcss: 8.5.1
+      postcss: 8.5.3
       rollup: 4.30.1
     optionalDependencies:
       '@types/node': 22.13.4
