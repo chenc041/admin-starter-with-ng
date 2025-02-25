@@ -37,7 +37,7 @@ importers:
         version: 19.1.7(@angular/core@19.1.7(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1)
       '@primeng/themes':
         specifier: ^19.0.5
-        version: 19.0.7
+        version: 19.0.8
       primeicons:
         specifier: ^7.0.0
         version: 7.0.0
@@ -1569,8 +1569,8 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@primeng/themes@19.0.7':
-    resolution: {integrity: sha512-Ke3LvQh0j2aIBrQfe/CJpTtwCy+Y5pQrjyfkyI/j2g+i97r+um9bgk9gIBkCoiXJUuTTXUtF6VOF51uCusUiiw==}
+  '@primeng/themes@19.0.8':
+    resolution: {integrity: sha512-queTe7Ruk5Nkwgr4Pz2IAWcYcU4hp/89cUn9m/qKRf2fA5ViD2SWahz0sY2nsLAHGaDfrEiiDqpNIcP4Fx+r7Q==}
 
   '@primeuix/styled@0.3.2':
     resolution: {integrity: sha512-ColZes0+/WKqH4ob2x8DyNYf1NENpe5ZguOvx5yCLxaP8EIMVhLjWLO/3umJiDnQU4XXMLkn2mMHHw+fhTX/mw==}
@@ -6400,7 +6400,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@primeng/themes@19.0.7':
+  '@primeng/themes@19.0.8':
     dependencies:
       '@primeuix/styled': 0.3.2
 
