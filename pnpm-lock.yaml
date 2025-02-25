@@ -43,7 +43,7 @@ importers:
         version: 7.0.0
       primeng:
         specifier: ^19.0.5
-        version: 19.0.7(510ede07b9fd81ddf63b7fbdb91815bb)
+        version: 19.0.8(510ede07b9fd81ddf63b7fbdb91815bb)
       rxjs:
         specifier: ~7.8.1
         version: 7.8.1
@@ -3918,8 +3918,8 @@ packages:
   primeicons@7.0.0:
     resolution: {integrity: sha512-jK3Et9UzwzTsd6tzl2RmwrVY/b8raJ3QZLzoDACj+oTJ0oX7L9Hy+XnVwgo4QVKlKpnP/Ur13SXV/pVh4LzaDw==}
 
-  primeng@19.0.7:
-    resolution: {integrity: sha512-Yr+mV3RJhx4w31N26MYoppwq8kqb6ZX/Tctn4gE46+kewhb/t1ac8JQNrS6xPtsL0M2EYL0wS6o5nE0jfL5viw==}
+  primeng@19.0.8:
+    resolution: {integrity: sha512-0Xz/XZ4Nu3GYGvnCMDFW5HTgV8VyPa2gC/rxgawcl25GhyXReGps+AeXyhabrNyCSCfykU1ng/6gGUeTse+GGg==}
     peerDependencies:
       '@angular/animations': ^19.0.0
       '@angular/cdk': ^19.0.0
@@ -8914,7 +8914,7 @@ snapshots:
 
   primeicons@7.0.0: {}
 
-  primeng@19.0.7(510ede07b9fd81ddf63b7fbdb91815bb):
+  primeng@19.0.8(510ede07b9fd81ddf63b7fbdb91815bb):
     dependencies:
       '@angular/animations': 19.1.7(@angular/core@19.1.7(rxjs@7.8.1)(zone.js@0.15.0))
       '@angular/cdk': 19.0.4(@angular/common@19.1.7(@angular/core@19.1.7(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1))(@angular/core@19.1.7(rxjs@7.8.1)(zone.js@0.15.0))(rxjs@7.8.1)
