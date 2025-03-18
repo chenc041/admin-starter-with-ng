@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { TableModule } from 'primeng/table';
-import { NgFor } from '@angular/common';
+import { Component, ViewChild } from '@angular/core';
+import { Table, TableModule } from 'primeng/table';
 
 interface Column {
   field: string;
@@ -9,7 +8,7 @@ interface Column {
 
 @Component({
   selector: 'app-log',
-  imports: [TableModule, NgFor],
+  imports: [TableModule],
   templateUrl: './log.component.html',
 })
 export default class LogComponent {
@@ -29,6 +28,8 @@ export default class LogComponent {
   ];
   cols!: Column[];
 
+  @ViewChild('dt', { static: true }) dt!: Table;
+
   constructor() {
     this.cols = [
       { field: 'code', header: 'Code' },
@@ -36,5 +37,8 @@ export default class LogComponent {
       { field: 'category', header: 'Category' },
       { field: 'quantity', header: 'Quantity' },
     ];
+    setTimeout(() => {
+      console.log(this.dt, '------');
+    }, 1000);
   }
 }

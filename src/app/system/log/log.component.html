@@ -1,18 +1,20 @@
-<div>
-  <p-table [columns]="cols" [tableStyle]="{ 'min-width': '50rem' }" [value]="products">
-    <ng-template #header let-columns>
-      <tr>
-        <th *ngFor="let col of columns">
+<p-table #dt [columns]="cols" [tableStyle]="{ 'min-width': '50rem' }" [value]="products">
+  <ng-template #header let-columns>
+    <tr>
+      @for (col of columns; track col.field) {
+        <th>
           {{ col.header }}
         </th>
-      </tr>
-    </ng-template>
-    <ng-template #body let-columns="columns" let-rowData>
-      <tr>
-        <td *ngFor="let col of columns">
+      }
+    </tr>
+  </ng-template>
+  <ng-template #body let-columns="columns" let-rowData>
+    <tr>
+      @for (col of columns; track col.field) {
+        <td>
           {{ rowData[col.field] }}
         </td>
-      </tr>
-    </ng-template>
-  </p-table>
-</div>
+      }
+    </tr>
+  </ng-template>
+</p-table>
