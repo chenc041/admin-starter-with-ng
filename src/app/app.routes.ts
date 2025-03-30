@@ -29,15 +29,11 @@ export const routes: Routes = [
     loadComponent: () => import('~/app/login/login.component'),
   },
   {
-    path: '403',
-    loadComponent: () => import('./exception/forbidden/forbidden.component'),
-  },
-  {
-    path: '500',
-    loadComponent: () => import('./exception/server-error/server-error.component'),
+    path: 'exception/:type',
+    loadComponent: () => import('~/app/exception/exception.component'),
   },
   {
     path: '**',
-    loadComponent: () => import('./exception/not-found/not-found.component'),
+    loadComponent: () => import('~/app/exception/exception.component'),
   },
 ];

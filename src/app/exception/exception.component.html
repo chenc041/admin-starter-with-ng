@@ -1,0 +1,32 @@
+<div class="w-full h-full flex justify-center items-center">
+  @switch (errorCode()) {
+    @case ('403') {
+      <app-error-page
+        [errorCode]="errorCode()"
+        [errorMessage]="errorMessage()"
+        [errorTitle]="errorTitle()"
+      ></app-error-page>
+    }
+    @case ('401') {
+      <app-error-page
+        [errorCode]="errorCode()"
+        [errorMessage]="errorMessage()"
+        [errorTitle]="errorTitle()"
+      ></app-error-page>
+    }
+    @case ('500') {
+      <app-error-page
+        [errorCode]="errorCode()"
+        [errorMessage]="errorMessage()"
+        [errorTitle]="errorTitle()"
+      ></app-error-page>
+    }
+    @default {
+      <app-error-page
+        [errorCode]="errorCode()"
+        [errorMessage]="errorMessage()"
+        [errorTitle]="errorTitle()"
+      ></app-error-page>
+    }
+  }
+</div>
