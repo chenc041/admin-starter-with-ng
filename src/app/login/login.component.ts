@@ -4,13 +4,12 @@ import { PasswordModule } from 'primeng/password';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
-import { LoginService } from '~/app/auth/login/login.service';
-import { NgClass } from '@angular/common';
+import { LoginService } from '~/app/login/login.service';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, PasswordModule, InputTextModule, ButtonModule, CheckboxModule, NgClass],
+  imports: [ReactiveFormsModule, FormsModule, PasswordModule, InputTextModule, ButtonModule, CheckboxModule],
   templateUrl: './login.component.html',
 })
 export default class LoginComponent {
@@ -18,7 +17,7 @@ export default class LoginComponent {
   loginForm: FormGroup = new FormGroup({
     username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required]),
-    remember: new FormControl<boolean | null>(null, [Validators.required, Validators.requiredTrue]),
+    remember: new FormControl<boolean | null>(null),
   });
 
   handleLogin(): void {

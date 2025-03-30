@@ -7,18 +7,18 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () => import('./dashboard/dashboard.component'),
+        loadComponent: () => import('~/app/pages/dashboard/dashboard.component'),
       },
       {
         path: 'system',
         children: [
           {
             path: 'log',
-            loadComponent: () => import('./system/log/log.component'),
+            loadComponent: () => import('~/app/pages/system/log/log.component'),
           },
           {
             path: 'dict',
-            loadComponent: () => import('./system/dict/dict.component'),
+            loadComponent: () => import('~/app/pages/system/dict/dict.component'),
           },
         ],
       },
@@ -26,7 +26,7 @@ export const routes: Routes = [
   },
   {
     path: 'login',
-    loadComponent: () => import('./auth/login/login.component'),
+    loadComponent: () => import('~/app/login/login.component'),
   },
   {
     path: '403',

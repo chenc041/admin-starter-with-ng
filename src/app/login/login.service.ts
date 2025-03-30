@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { LoginDto } from '~/app/auth/login/login.interface';
+import { LoginDto } from '~/app/login/login.interface';
 import { Result } from '~/app/interfaces/menu';
 import { Observable } from 'rxjs';
 
