@@ -1,4 +1,10 @@
-import { ApplicationConfig, isDevMode, provideZoneChangeDetection } from '@angular/core';
+import {
+  ApplicationConfig,
+  InjectionToken,
+  isDevMode,
+  makeEnvironmentProviders,
+  provideZoneChangeDetection,
+} from '@angular/core';
 import {
   provideRouter,
   RouterFeatures,
@@ -17,6 +23,7 @@ import { provideServiceWorker } from '@angular/service-worker';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { loggingInterceptor } from '~/app/interceptors/logging.interceptor';
 import { authInterceptor } from '~/app/interceptors/auth.interceptor';
+import { I18nServiceService } from '~/app/services/i18n.service.service';
 
 const routeFeatures: RouterFeatures[] = [
   withDebugTracing(),
@@ -33,6 +40,8 @@ const routeFeatures: RouterFeatures[] = [
 if (!isDevMode()) {
   routeFeatures.push(withViewTransitions());
 }
+
+const I18N = new InjectionToken('I18N');
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -53,5 +62,6 @@ export const appConfig: ApplicationConfig = {
       },
       ripple: true,
     }),
+    makeEnvironmentProviders([I18nServiceService]),
   ],
 };
