@@ -5,7 +5,7 @@ export const I18N_TOKEN = new InjectionToken<Record<string, any>>('I18N_LANG');
 @Injectable({
   providedIn: 'root',
 })
-export class I18nServiceService {
+export class I18nService {
   private readonly langMap = new Map<string, string>();
   private localeSource = inject(I18N_TOKEN);
   constructor() {

@@ -17,7 +17,7 @@ import { provideServiceWorker } from '@angular/service-worker';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { loggingInterceptor } from '~/app/interceptors/logging.interceptor';
 import { authInterceptor } from '~/app/interceptors/auth.interceptor';
-import { provideI18nConfig } from '~/app/services/i18n.service.service';
+import { provideI18nConfig } from '~/app/services/i18n.service';
 import zh_CN from '~/app/locale/zh_CN';
 
 const routeFeatures: RouterFeatures[] = [
