@@ -1,41 +1,35 @@
-import { Injectable } from '@angular/core';
-import { LANGUAGE_KEY } from '~/app/constants';
+import { inject, Injectable, InjectionToken, makeEnvironmentProviders } from '@angular/core';
+
+export const I18N_TOKEN = new InjectionToken<Record<string, any>>('I18N_LANG');
 
 @Injectable({
   providedIn: 'root',
 })
 export class I18nServiceService {
-  /**
-   * 默认语言
-   * @private
-   */
-  private DEFAULT_LANG = 'zh_CN';
-
-  /**
-   * 语言映射
-   * @private
-   */
-  private langMap = new Map<string, string>();
-
-  /**
-   * 切换语言
-   * @param lang
-   */
-  changLang(lang: string) {
-    window.localStorage.setItem(LANGUAGE_KEY, lang);
+  private readonly langMap = new Map<string, string>();
+  private localeSource = inject(I18N_TOKEN);
+  constructor() {
+    this.langMap = new Map(Object.entries(this.localeSource));
   }
 
-  /**
-   * 获取当前语言
-   */
-  getLang() {
-    return window.localStorage.getItem(LANGUAGE_KEY);
-  }
-
-  /**
-   * 重置语言
-   */
-  resetLang() {
-    window.localStorage.removeItem(LANGUAGE_KEY);
+  translate(key: string) {
+    const isExist = this.langMap.has(key);
+    if (!isExist) {
+      console.warn(`${key} 缺少对应的国际化翻译`);
+    }
+    return this.langMap.get(key) ?? key;
   }
 }
+
+/**
+ * 注册国际化配置
+ * @param locale
+ */
+export const provideI18nConfig = (locale: Record<string, any>) => {
+  return makeEnvironmentProviders([
+    {
+      provide: I18N_TOKEN,
+      useValue: locale,
+    },
+  ]);
+};

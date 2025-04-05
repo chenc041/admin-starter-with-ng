@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { TranslatePipe } from '~/app/pipes/translate.pipe';
+import { DatePickerModule } from 'primeng/datepicker';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [TranslatePipe],
+  imports: [DatePickerModule, FormsModule],
   templateUrl: './dashboard.component.html',
 })
-export default class DashboardComponent {}
+export default class DashboardComponent {
+  date: Date | undefined;
+}

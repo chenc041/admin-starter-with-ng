@@ -6,8 +6,8 @@ import { I18nServiceService } from '~/app/services/i18n.service.service';
 })
 export class TranslatePipe implements PipeTransform {
   private i18nService = inject(I18nServiceService);
-  transform(value: unknown, ...args: unknown[]): unknown {
-    console.log(value, args, 'translate', this.i18nService);
-    return value;
+
+  transform(value: unknown): unknown {
+    return this.i18nService.translate(value as string);
   }
 }
