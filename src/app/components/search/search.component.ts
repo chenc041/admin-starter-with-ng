@@ -4,18 +4,18 @@ import { InputText } from 'primeng/inputtext';
 import { ButtonDirective, ButtonLabel } from 'primeng/button';
 import { Ripple } from 'primeng/ripple';
 import { TranslatePipe } from '~/app/pipes/translate.pipe';
+import { FloatLabel } from 'primeng/floatlabel';
 
-interface FormConfig {
+export interface FormConfig {
   type: string;
   label: string;
-  placeholder: string;
   prop: string;
   formItem: (string | ((control: AbstractControl) => ValidationErrors | null))[];
 }
 
 @Component({
   selector: 'app-search',
-  imports: [ReactiveFormsModule, InputText, ButtonDirective, ButtonLabel, Ripple, TranslatePipe],
+  imports: [ReactiveFormsModule, InputText, ButtonDirective, ButtonLabel, Ripple, TranslatePipe, FloatLabel],
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

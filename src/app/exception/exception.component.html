@@ -1,14 +1,14 @@
 @switch (errorCode()) {
   @case ('403') {
-    <app-error-page [errorCode]="errorCode()" [errorMessage]="errorMessage" [errorTitle]="errorTitle"></app-error-page>
+    <app-error-page [errorCode]="errorCode()" [errorMessage]="errorMessage" [errorTitle]="errorTitle" />
   }
   @case ('401') {
-    <app-error-page [errorCode]="errorCode()" [errorMessage]="errorMessage" [errorTitle]="errorTitle"></app-error-page>
+    <app-error-page [errorCode]="errorCode()" [errorMessage]="errorMessage" [errorTitle]="errorTitle" />
   }
   @case ('500') {
-    <app-error-page [errorCode]="errorCode()" [errorMessage]="errorMessage" [errorTitle]="errorTitle"></app-error-page>
+    <app-error-page [errorCode]="errorCode()" [errorMessage]="errorMessage" [errorTitle]="errorTitle" />
   }
   @default {
-    <app-error-page [errorCode]="errorCode()" [errorMessage]="errorMessage" [errorTitle]="errorTitle"></app-error-page>
+    <app-error-page [errorCode]="errorCode()" [errorMessage]="errorMessage" [errorTitle]="errorTitle" />
   }
 }

@@ -13,9 +13,14 @@ export default class DashboardComponent {
   formConfig = [
     {
       type: 'input',
-      label: '关键词',
-      placeholder: '请输入关键词',
-      prop: 'keyword',
+      label: '姓名',
+      prop: 'name',
+      formItem: ['', Validators.required],
+    },
+    {
+      type: 'input',
+      label: '昵称',
+      prop: 'nickname',
       formItem: ['', Validators.required],
     },
   ];

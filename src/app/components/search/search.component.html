@@ -1,13 +1,22 @@
-<form (ngSubmit)="handleSearch()" [formGroup]="searchForm">
-  @for (config of formConfig(); track config.prop) {
-    <div class="card flex justify-center">
-      <input [formControlName]="config.prop" pInputText type="text" [placeholder]="config.placeholder | translate" />
+<form (ngSubmit)="handleSearch()" [formGroup]="searchForm" class="py-5 px-2">
+  <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2">
+    @for (config of formConfig(); track config.prop) {
+      @switch (config.type) {
+        @case ('input') {
+          <p-floatlabel>
+            <input [formControlName]="config.prop" class="w-full" pInputText type="text" [id]="config.prop" />
+            <label [for]="config.prop">{{ config.label | translate }}</label>
+          </p-floatlabel>
+        }
+      }
+    }
+    <div class="grid grid-cols-2 gap-2">
+      <button pButton pRipple type="submit">
+        <span pButtonLabel>{{ '搜索' | translate }} </span>
+      </button>
+      <button (click)="handleReset()" pButton pRipple severity="secondary">
+        <span pButtonLabel>{{ '重置' | translate }}</span>
+      </button>
     </div>
-  }
-  <button pButton pRipple type="submit">
-    <span pButtonLabel>{{ '搜索' | translate }} </span>
-  </button>
-  <button (click)="handleReset()" pButton pRipple>
-    <span pButtonLabel>{{ '重置' | translate }}</span>
-  </button>
+  </div>
 </form>
