@@ -1,5 +1,5 @@
 <form (ngSubmit)="handleSearch()" [formGroup]="searchForm" class="py-5 px-2">
-  <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-2">
+  <div class="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-8 gap-2">
     @for (config of formConfig(); track config.prop) {
       @switch (config.type) {
         @case ('input') {
