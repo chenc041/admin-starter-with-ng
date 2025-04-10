@@ -10,8 +10,8 @@
         }
       }
     }
-    <div class="grid grid-cols-2 gap-2">
-      <button pButton pRipple type="submit">
+    <div class="flex">
+      <button class="mr-2" pButton pRipple type="submit">
         <span pButtonLabel>{{ '搜索' | translate }} </span>
       </button>
       <button (click)="handleReset()" pButton pRipple severity="secondary">
