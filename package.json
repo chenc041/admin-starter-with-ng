@@ -19,7 +19,7 @@
     "@angular/platform-browser": "^19.2.6",
     "@angular/platform-browser-dynamic": "^19.2.6",
     "@angular/router": "^19.2.6",
-    "@angular/service-worker": "^19.2.5",
+    "@angular/service-worker": "^19.2.6",
     "@primeng/themes": "^19.0.10",
     "primeicons": "^7.0.0",
     "primeng": "^19.0.10",
