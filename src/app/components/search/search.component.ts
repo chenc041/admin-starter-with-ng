@@ -15,7 +15,16 @@ export interface FormConfig {
 
 @Component({
   selector: 'app-search',
-  imports: [ReactiveFormsModule, InputText, ButtonDirective, ButtonLabel, Ripple, TranslatePipe, FloatLabel],
+  imports: [
+    ReactiveFormsModule,
+    InputText,
+    ButtonDirective,
+    ButtonLabel,
+    Ripple,
+    TranslatePipe,
+    FloatLabel,
+    ButtonDirective,
+  ],
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
