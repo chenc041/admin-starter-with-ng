@@ -34,7 +34,7 @@
     "@tailwindcss/cli": "^4.1.4",
     "@tailwindcss/postcss": "^4.1.4",
     "@types/jasmine": "~5.1.7",
-    "angular-eslint": "19.8.0",
+    "angular-eslint": "20.0.0",
     "eslint": "^9.25.1",
     "jasmine-core": "~5.8.0",
     "karma": "~6.4.4",
