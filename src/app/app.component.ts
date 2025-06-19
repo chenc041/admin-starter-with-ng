@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
+	selector: 'app-root',
+	imports: [RouterOutlet],
+	templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'admin-starter-with-ng';
+	title = 'admin-starter-with-ng';
 }

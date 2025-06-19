@@ -1,12 +1,16 @@
-import { ApplicationConfig, isDevMode, provideZoneChangeDetection } from '@angular/core';
 import {
-  provideRouter,
-  RouterFeatures,
-  withComponentInputBinding,
-  withDebugTracing,
-  withInMemoryScrolling,
-  withRouterConfig,
-  withViewTransitions,
+	ApplicationConfig,
+	isDevMode,
+	provideZoneChangeDetection,
+} from '@angular/core';
+import {
+	provideRouter,
+	RouterFeatures,
+	withComponentInputBinding,
+	withDebugTracing,
+	withInMemoryScrolling,
+	withRouterConfig,
+	withViewTransitions,
 } from '@angular/router';
 
 import { routes } from './app.routes';
@@ -21,40 +25,40 @@ import { provideI18nConfig } from '~/app/services/i18n.service';
 import zh_CN from '~/app/locale/zh_CN';
 
 const routeFeatures: RouterFeatures[] = [
-  withDebugTracing(),
-  withComponentInputBinding(),
-  withRouterConfig({
-    onSameUrlNavigation: 'reload',
-  }),
-  withInMemoryScrolling({
-    scrollPositionRestoration: 'enabled',
-    anchorScrolling: 'enabled',
-  }),
+	withDebugTracing(),
+	withComponentInputBinding(),
+	withRouterConfig({
+		onSameUrlNavigation: 'reload',
+	}),
+	withInMemoryScrolling({
+		scrollPositionRestoration: 'enabled',
+		anchorScrolling: 'enabled',
+	}),
 ];
 
 if (!isDevMode()) {
-  routeFeatures.push(withViewTransitions());
+	routeFeatures.push(withViewTransitions());
 }
 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes, ...routeFeatures),
-    provideServiceWorker('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      registrationStrategy: 'registerWhenStable:30000',
-    }),
-    provideHttpClient(withInterceptors([loggingInterceptor, authInterceptor])),
-    provideAnimationsAsync(),
-    providePrimeNG({
-      theme: {
-        preset: Aura,
-        options: {
-          darkModeSelector: false,
-        },
-      },
-      ripple: true,
-    }),
-    provideI18nConfig(zh_CN),
-  ],
+	providers: [
+		provideZoneChangeDetection({ eventCoalescing: true }),
+		provideRouter(routes, ...routeFeatures),
+		provideServiceWorker('ngsw-worker.js', {
+			enabled: !isDevMode(),
+			registrationStrategy: 'registerWhenStable:30000',
+		}),
+		provideHttpClient(withInterceptors([loggingInterceptor, authInterceptor])),
+		provideAnimationsAsync(),
+		providePrimeNG({
+			theme: {
+				preset: Aura,
+				options: {
+					darkModeSelector: false,
+				},
+			},
+			ripple: true,
+		}),
+		provideI18nConfig(zh_CN),
+	],
 };

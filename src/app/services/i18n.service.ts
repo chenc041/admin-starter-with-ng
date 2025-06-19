@@ -1,25 +1,32 @@
-import { inject, Injectable, InjectionToken, makeEnvironmentProviders } from '@angular/core';
+import {
+	inject,
+	Injectable,
+	InjectionToken,
+	makeEnvironmentProviders,
+} from '@angular/core';
 import { LOCALE_DEP_KEY } from '~/app/constants';
 
-export const I18N_TOKEN = new InjectionToken<Record<string, any>>(LOCALE_DEP_KEY);
+export const I18N_TOKEN = new InjectionToken<Record<string, any>>(
+	LOCALE_DEP_KEY,
+);
 
 @Injectable({
-  providedIn: 'root',
+	providedIn: 'root',
 })
 export class I18nService {
-  private readonly langMap = new Map<string, string>();
-  private localeSource = inject(I18N_TOKEN);
-  constructor() {
-    this.langMap = new Map(Object.entries(this.localeSource));
-  }
+	private readonly langMap = new Map<string, string>();
+	private localeSource = inject(I18N_TOKEN);
+	constructor() {
+		this.langMap = new Map(Object.entries(this.localeSource));
+	}
 
-  translate(key: string) {
-    const isExist = this.langMap.has(key);
-    if (!isExist) {
-      console.warn(`${key} 缺少对应的国际化翻译`);
-    }
-    return this.langMap.get(key) ?? key;
-  }
+	translate(key: string) {
+		const isExist = this.langMap.has(key);
+		if (!isExist) {
+			console.warn(`${key} 缺少对应的国际化翻译`);
+		}
+		return this.langMap.get(key) ?? key;
+	}
 }
 
 /**
@@ -27,10 +34,10 @@ export class I18nService {
  * @param locale
  */
 export const provideI18nConfig = (locale: Record<string, any>) => {
-  return makeEnvironmentProviders([
-    {
-      provide: I18N_TOKEN,
-      useValue: locale,
-    },
-  ]);
+	return makeEnvironmentProviders([
+		{
+			provide: I18N_TOKEN,
+			useValue: locale,
+		},
+	]);
 };

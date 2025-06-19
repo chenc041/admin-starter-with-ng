@@ -1,12 +1,12 @@
 export interface Menu {
-  id: number;
-  name?: string;
-  path: string;
-  children?: Menu[];
+	id: number;
+	name?: string;
+	path: string;
+	children?: Menu[];
 }
 
 export interface Result<T = any> {
-  data: T;
-  message: string;
-  statusCode: number;
+	data: T;
+	message: string;
+	statusCode: number;
 }
