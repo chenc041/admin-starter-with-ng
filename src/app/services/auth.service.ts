@@ -10,6 +10,6 @@ export class AuthService {
 	}
 
 	getAuthToken() {
-		return 'Bearer ' + localStorage.getItem(USER_TOKEN);
+		return `Bearer ${localStorage.getItem(USER_TOKEN)}`;
 	}
 }

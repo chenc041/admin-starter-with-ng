@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import type { Menu } from '~/app/interfaces/menu.interface';
 import { HeaderComponent } from '~/app/layout/components/header/header.component';
-import { Menu } from '~/app/interfaces/menu';
 import { SidebarComponent } from '~/app/layout/components/sidebar/sidebar.component';
 import { TranslatePipe } from '~/app/pipes/translate.pipe';
 

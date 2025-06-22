@@ -3,21 +3,21 @@ import {
 	Component,
 	inject,
 	input,
-	OnInit,
+	type OnInit,
 	output,
 } from '@angular/core';
 import {
-	AbstractControl,
+	type AbstractControl,
 	FormBuilder,
-	FormGroup,
+	type FormGroup,
 	ReactiveFormsModule,
-	ValidationErrors,
+	type ValidationErrors,
 } from '@angular/forms';
-import { InputText } from 'primeng/inputtext';
 import { ButtonDirective, ButtonLabel } from 'primeng/button';
+import { FloatLabel } from 'primeng/floatlabel';
+import { InputText } from 'primeng/inputtext';
 import { Ripple } from 'primeng/ripple';
 import { TranslatePipe } from '~/app/pipes/translate.pipe';
-import { FloatLabel } from 'primeng/floatlabel';
 
 export interface FormConfig {
 	type: string;

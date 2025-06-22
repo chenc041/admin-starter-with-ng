@@ -4,9 +4,3 @@ export interface Menu {
 	path: string;
 	children?: Menu[];
 }
-
-export interface Result<T = any> {
-	data: T;
-	message: string;
-	statusCode: number;
-}

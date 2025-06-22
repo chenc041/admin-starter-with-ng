@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Table, TableModule } from 'primeng/table';
+import { type Table, TableModule } from 'primeng/table';
 
 interface Column {
 	field: string;

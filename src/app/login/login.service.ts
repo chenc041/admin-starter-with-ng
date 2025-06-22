@@ -1,8 +1,8 @@
-import { inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { LoginDto } from '~/app/login/login.interface';
-import { Result } from '~/app/interfaces/menu';
-import { Observable } from 'rxjs';
+import { inject, Injectable } from '@angular/core';
+import type { Observable } from 'rxjs';
+import type { Result } from '~/app/interfaces/api.interface';
+import type { LoginDto } from '~/app/login/login.interface';
 
 @Injectable({
 	providedIn: 'root',

@@ -1,12 +1,12 @@
 import {
-	inject,
 	Injectable,
 	InjectionToken,
+	inject,
 	makeEnvironmentProviders,
 } from '@angular/core';
 import { LOCALE_DEP_KEY } from '~/app/constants';
 
-export const I18N_TOKEN = new InjectionToken<Record<string, any>>(
+export const I18N_TOKEN = new InjectionToken<Record<string, string>>(
 	LOCALE_DEP_KEY,
 );
 
@@ -33,7 +33,7 @@ export class I18nService {
  * 注册国际化配置
  * @param locale
  */
-export const provideI18nConfig = (locale: Record<string, any>) => {
+export const provideI18nConfig = (locale: Record<string, string>) => {
 	return makeEnvironmentProviders([
 		{
 			provide: I18N_TOKEN,

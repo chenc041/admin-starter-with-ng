@@ -1,4 +1,4 @@
-import { HttpInterceptorFn } from '@angular/common/http';
+import type { HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { AuthService } from '~/app/services/auth.service';
 import { environment } from '~/environments/environment';

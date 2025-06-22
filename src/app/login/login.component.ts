@@ -6,10 +6,10 @@ import {
 	ReactiveFormsModule,
 	Validators,
 } from '@angular/forms';
-import { PasswordModule } from 'primeng/password';
-import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
+import { InputTextModule } from 'primeng/inputtext';
+import { PasswordModule } from 'primeng/password';
 import { LoginService } from '~/app/login/login.service';
 
 @Component({

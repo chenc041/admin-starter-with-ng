@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { DatePickerModule } from 'primeng/datepicker';
 import { FormsModule, Validators } from '@angular/forms';
+import { DatePickerModule } from 'primeng/datepicker';
 import { SearchComponent } from '~/app/components/search/search.component';
 
 @Component({
