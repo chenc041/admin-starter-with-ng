@@ -1,6 +1,6 @@
 import { type ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DictComponent } from './dict.component';
+import DictComponent from '~/app/pages/system/dict/dict.component';
 
 describe('DictComponent', () => {
 	let component: DictComponent;

@@ -1,11 +1,5 @@
 import { Component, inject } from '@angular/core';
-import {
-	FormControl,
-	FormGroup,
-	FormsModule,
-	ReactiveFormsModule,
-	Validators,
-} from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { CheckboxModule } from 'primeng/checkbox';
 import { InputTextModule } from 'primeng/inputtext';
@@ -15,14 +9,7 @@ import { LoginService } from '~/app/login/login.service';
 @Component({
 	selector: 'app-login',
 	standalone: true,
-	imports: [
-		ReactiveFormsModule,
-		FormsModule,
-		PasswordModule,
-		InputTextModule,
-		ButtonModule,
-		CheckboxModule,
-	],
+	imports: [ReactiveFormsModule, FormsModule, PasswordModule, InputTextModule, ButtonModule, CheckboxModule],
 	templateUrl: './login.component.html',
 })
 export default class LoginComponent {

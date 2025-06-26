@@ -7,8 +7,7 @@ export const routes: Routes = [
 		children: [
 			{
 				path: '',
-				loadComponent: () =>
-					import('~/app/pages/dashboard/dashboard.component'),
+				loadComponent: () => import('~/app/pages/dashboard/dashboard.component'),
 			},
 			{
 				path: 'system',
@@ -19,8 +18,7 @@ export const routes: Routes = [
 					},
 					{
 						path: 'dict',
-						loadComponent: () =>
-							import('~/app/pages/system/dict/dict.component'),
+						loadComponent: () => import('~/app/pages/system/dict/dict.component'),
 					},
 				],
 			},

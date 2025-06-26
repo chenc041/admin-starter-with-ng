@@ -1,14 +1,7 @@
-import {
-	Injectable,
-	InjectionToken,
-	inject,
-	makeEnvironmentProviders,
-} from '@angular/core';
+import { Injectable, InjectionToken, inject, makeEnvironmentProviders } from '@angular/core';
 import { LOCALE_DEP_KEY } from '~/app/constants';
 
-export const I18N_TOKEN = new InjectionToken<Record<string, string>>(
-	LOCALE_DEP_KEY,
-);
+export const I18N_TOKEN = new InjectionToken<Record<string, string>>(LOCALE_DEP_KEY);
 
 @Injectable({
 	providedIn: 'root',

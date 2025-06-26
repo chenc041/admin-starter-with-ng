@@ -1,9 +1,5 @@
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
-import {
-	type ApplicationConfig,
-	isDevMode,
-	provideZoneChangeDetection,
-} from '@angular/core';
+import { type ApplicationConfig, isDevMode, provideZoneChangeDetection } from '@angular/core';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {
 	provideRouter,

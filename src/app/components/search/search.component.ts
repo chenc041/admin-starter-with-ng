@@ -1,18 +1,5 @@
-import {
-	ChangeDetectionStrategy,
-	Component,
-	inject,
-	input,
-	type OnInit,
-	output,
-} from '@angular/core';
-import {
-	type AbstractControl,
-	FormBuilder,
-	type FormGroup,
-	ReactiveFormsModule,
-	type ValidationErrors,
-} from '@angular/forms';
+import { ChangeDetectionStrategy, Component, inject, input, type OnInit, output } from '@angular/core';
+import { type AbstractControl, FormBuilder, type FormGroup, ReactiveFormsModule, type ValidationErrors } from '@angular/forms';
 import { ButtonDirective, ButtonLabel } from 'primeng/button';
 import { FloatLabel } from 'primeng/floatlabel';
 import { InputText } from 'primeng/inputtext';
@@ -23,24 +10,12 @@ export interface FormConfig {
 	type: string;
 	label: string;
 	prop: string;
-	formItem: (
-		| string
-		| ((control: AbstractControl) => ValidationErrors | null)
-	)[];
+	formItem: (string | ((control: AbstractControl) => ValidationErrors | null))[];
 }
 
 @Component({
 	selector: 'app-search',
-	imports: [
-		ReactiveFormsModule,
-		InputText,
-		ButtonDirective,
-		ButtonLabel,
-		Ripple,
-		TranslatePipe,
-		FloatLabel,
-		ButtonDirective,
-	],
+	imports: [ReactiveFormsModule, InputText, ButtonDirective, ButtonLabel, Ripple, TranslatePipe, FloatLabel, ButtonDirective],
 	templateUrl: './search.component.html',
 	styleUrl: './search.component.scss',
 	changeDetection: ChangeDetectionStrategy.OnPush,
@@ -80,10 +55,7 @@ export class SearchComponent implements OnInit {
 				acc[cur.prop] = cur.formItem;
 				return acc;
 			},
-			{} as Record<
-				string,
-				(string | ((control: AbstractControl) => ValidationErrors | null))[]
-			>,
+			{} as Record<string, (string | ((control: AbstractControl) => ValidationErrors | null))[]>,
 		);
 		this.searchForm = this.formBuilder.group(formGroup);
 	}
