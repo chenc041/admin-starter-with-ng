@@ -7,8 +7,7 @@
 		"build": "ng build",
 		"watch": "ng build --watch --configuration development",
 		"test": "ng test",
-		"format": "biome format src --write",
-		"lint": "biome check src --write"
+		"lint": "biome check src *json --write"
 	},
 	"private": true,
 	"dependencies": {
