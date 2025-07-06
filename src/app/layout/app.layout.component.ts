@@ -6,34 +6,34 @@ import { SidebarComponent } from '~/app/layout/components/sidebar/sidebar.compon
 import { TranslatePipe } from '~/app/pipes/translate.pipe';
 
 @Component({
-	selector: 'app-layout',
-	imports: [RouterOutlet, HeaderComponent, SidebarComponent, TranslatePipe],
-	templateUrl: './app.layout.component.html',
-	changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'app-layout',
+  imports: [RouterOutlet, HeaderComponent, SidebarComponent, TranslatePipe],
+  templateUrl: './app.layout.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class AppLayoutComponent {
-	dataSource: Menu[] = [
-		{
-			id: 1,
-			name: 'Dashboard',
-			path: '',
-		},
-		{
-			id: 2,
-			name: '系统管理',
-			path: 'system',
-			children: [
-				{
-					id: 1,
-					path: 'log',
-					name: '系统日志',
-				},
-				{
-					id: 2,
-					path: 'dict',
-					name: '字典管理',
-				},
-			],
-		},
-	];
+  dataSource: Menu[] = [
+    {
+      id: 1,
+      name: 'Dashboard',
+      path: '',
+    },
+    {
+      id: 2,
+      name: '系统管理',
+      path: 'system',
+      children: [
+        {
+          id: 1,
+          path: 'log',
+          name: '系统日志',
+        },
+        {
+          id: 2,
+          path: 'dict',
+          name: '字典管理',
+        },
+      ],
+    },
+  ];
 }
