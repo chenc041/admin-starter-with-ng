@@ -94,17 +94,11 @@
 						"styles": ["src/styles.css", "src/var.css", "node_modules/primeicons/primeicons.css"],
 						"scripts": []
 					}
-				},
-				"lint": {
-					"builder": "@angular-eslint/builder:lint",
-					"options": {
-						"lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
-					}
 				}
 			}
 		}
 	},
 	"cli": {
-		"schematicCollections": ["angular-eslint"]
+		"packageManager": "bun"
 	}
 }
