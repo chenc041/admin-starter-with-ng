@@ -4,15 +4,15 @@
     "": {
       "name": "admin-starter-with-ng",
       "dependencies": {
-        "@angular/animations": "^20.1.0",
-        "@angular/common": "^20.1.0",
-        "@angular/compiler": "^20.1.0",
-        "@angular/core": "^20.1.0",
-        "@angular/forms": "^20.1.0",
-        "@angular/platform-browser": "^20.1.0",
-        "@angular/platform-browser-dynamic": "^20.1.0",
-        "@angular/router": "^20.1.0",
-        "@angular/service-worker": "^20.1.0",
+        "@angular/animations": "^20.1.2",
+        "@angular/common": "^20.1.2",
+        "@angular/compiler": "^20.1.2",
+        "@angular/core": "^20.1.2",
+        "@angular/forms": "^20.1.2",
+        "@angular/platform-browser": "^20.1.2",
+        "@angular/platform-browser-dynamic": "^20.1.2",
+        "@angular/router": "^20.1.2",
+        "@angular/service-worker": "^20.1.2",
         "@primeng/themes": "^20.0.0",
         "primeicons": "^7.0.0",
         "primeng": "^20.0.0",
@@ -21,10 +21,10 @@
         "zone.js": "~0.15.1",
       },
       "devDependencies": {
-        "@angular-devkit/build-angular": "^20.1.0",
-        "@angular/cli": "^20.1.0",
-        "@angular/compiler-cli": "^20.1.0",
-        "@biomejs/biome": "^2.1.1",
+        "@angular-devkit/build-angular": "^20.1.1",
+        "@angular/cli": "^20.1.1",
+        "@angular/compiler-cli": "^20.1.2",
+        "@biomejs/biome": "^2.1.2",
         "@tailwindcss/postcss": "^4.1.11",
         "@types/jasmine": "~5.1.8",
         "jasmine-core": "~5.9.0",
@@ -35,7 +35,7 @@
         "karma-jasmine-html-reporter": "~2.1.0",
         "lefthook": "^1.12.2",
         "tailwindcss": "^4.1.11",
-        "typescript": "~5.8.3",
+        "typescript": "~5.9.0",
       },
     },
   },
@@ -1708,7 +1708,7 @@
 
     "typed-assert": ["typed-assert@1.0.9", "https://registry.npmmirror.com/typed-assert/-/typed-assert-1.0.9.tgz", {}, "sha512-KNNZtayBCtmnNmbo5mG47p1XsCyrx6iVqomjcZnec/1Y5GGARaxPs6r49RnSPeUP3YjNYiU9sQHAtY4BBvnZwg=="],
 
-    "typescript": ["typescript@5.8.3", "https://registry.npmmirror.com/typescript/-/typescript-5.8.3.tgz", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ=="],
+    "typescript": ["typescript@5.9.2", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A=="],
 
     "ua-parser-js": ["ua-parser-js@0.7.40", "https://registry.npmmirror.com/ua-parser-js/-/ua-parser-js-0.7.40.tgz", { "bin": { "ua-parser-js": "script/cli.js" } }, "sha512-us1E3K+3jJppDBa3Tl0L3MOJiGhe1C6P0+nIvQAFYbxlMAx0h81eOwLmU57xgqToduDDPx3y5QsdjPfDu+FgOQ=="],
 
