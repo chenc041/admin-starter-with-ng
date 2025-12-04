@@ -14,7 +14,7 @@
         "@angular/platform-browser-dynamic": "^21.0.0",
         "@angular/router": "^21.0.0",
         "@angular/service-worker": "^21.0.0",
-        "@primeng/themes": "^20.0.0",
+        "@primeng/themes": "^21.0.0",
         "primeicons": "^7.0.0",
         "primeng": "^20.0.0",
         "rxjs": "~7.8.2",
@@ -561,13 +561,13 @@
 
     "@parcel/watcher-win32-x64": ["@parcel/watcher-win32-x64@2.5.1", "https://registry.npmmirror.com/@parcel/watcher-win32-x64/-/watcher-win32-x64-2.5.1.tgz", { "os": "win32", "cpu": "x64" }, "sha512-9lHBdJITeNR++EvSQVUcaZoWupyHfXe1jZvGZ06O/5MflPcuPLtEphScIBL+AiCWBO46tDSHzWyD0uDmmZqsgA=="],
 
-    "@primeng/themes": ["@primeng/themes@20.0.0", "https://registry.npmmirror.com/@primeng/themes/-/themes-20.0.0.tgz", { "dependencies": { "@primeuix/styled": "^0.7.0", "@primeuix/themes": "^1.2.1" } }, "sha512-TsiUGyexNsw+XlntWTueSrBA3InVA+W1suc2ESoCA5dcgkuTG6CUNbRJfuJc1xfhtugdlXOX0w5H+5iFjI+I6A=="],
+    "@primeng/themes": ["@primeng/themes@21.0.0", "", { "dependencies": { "@primeuix/styled": "^0.7.4", "@primeuix/themes": "^2.0.2" } }, "sha512-D9WJ76gh2W8LUP+oFXW8PPnb+TN8vA9oOrV0gj6goBJIPZi4s4VU24suRudgjBCVUjNXgtu6gT2lAsZQE0Id/Q=="],
 
-    "@primeuix/styled": ["@primeuix/styled@0.7.0", "https://registry.npmmirror.com/@primeuix/styled/-/styled-0.7.0.tgz", { "dependencies": { "@primeuix/utils": "^0.6.0" } }, "sha512-xUqMdQb75izeDkNWFK1QlU15aUl5LIU97Fq68IXOhrqqLsKEBnj5ftntFZrENQW70jAHwALdWP4EOGi/poc9Tg=="],
+    "@primeuix/styled": ["@primeuix/styled@0.7.4", "", { "dependencies": { "@primeuix/utils": "^0.6.1" } }, "sha512-QSO/NpOQg8e9BONWRBx9y8VGMCMYz0J/uKfNJEya/RGEu7ARx0oYW0ugI1N3/KB1AAvyGxzKBzGImbwg0KUiOQ=="],
 
     "@primeuix/styles": ["@primeuix/styles@1.2.1", "https://registry.npmmirror.com/@primeuix/styles/-/styles-1.2.1.tgz", { "dependencies": { "@primeuix/styled": "^0.7.0" } }, "sha512-Tri7pPgZgxrVmhJG8ijZZFolQ6vu27xnkGoAB9EFY8YlaKTM5iqkWzEcqdxy2KmgFWMXi+BrPHwO0RdQ6JCT+g=="],
 
-    "@primeuix/themes": ["@primeuix/themes@1.2.1", "https://registry.npmmirror.com/@primeuix/themes/-/themes-1.2.1.tgz", { "dependencies": { "@primeuix/styled": "^0.7.0" } }, "sha512-DVCFDncvag47tpag3TdufDTuvUbfKnkgzmlxAQkwuMS0IlPA3wChrf9VlL2wETg/ZpJm/tHobkJBnB9FmkiqnA=="],
+    "@primeuix/themes": ["@primeuix/themes@2.0.2", "", { "dependencies": { "@primeuix/styled": "^0.7.4" } }, "sha512-prwQvA3tDGBz8yWSUenaJUttEMCEvPvxwOfFhDPmSe1vwsfVKL2Nmh5eZvtPFQnxmIOPsHZS7zc0/L3CzJ83Eg=="],
 
     "@primeuix/utils": ["@primeuix/utils@0.6.0", "https://registry.npmmirror.com/@primeuix/utils/-/utils-0.6.0.tgz", {}, "sha512-ULpB87ImNAiX36OMtyDeRceWB7N/mVlh6gGLqp/lx8UMKZlLIQH/UAFND86hYXHwNpXeNKcWfMGreb0Oc0hcZA=="],
 
@@ -2005,6 +2005,10 @@
 
     "@parcel/watcher/node-addon-api": ["node-addon-api@7.1.1", "https://registry.npmmirror.com/node-addon-api/-/node-addon-api-7.1.1.tgz", {}, "sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ=="],
 
+    "@primeuix/styled/@primeuix/utils": ["@primeuix/utils@0.6.3", "", {}, "sha512-/SLNQSKQ73WbBIsflKVqbpVjCfFYvQO3Sf1LMheXyxh8JqxO4M63dzP56wwm9OPGuCQ6MYOd2AHgZXz+g7PZcg=="],
+
+    "@primeuix/styles/@primeuix/styled": ["@primeuix/styled@0.7.0", "https://registry.npmmirror.com/@primeuix/styled/-/styled-0.7.0.tgz", { "dependencies": { "@primeuix/utils": "^0.6.0" } }, "sha512-xUqMdQb75izeDkNWFK1QlU15aUl5LIU97Fq68IXOhrqqLsKEBnj5ftntFZrENQW70jAHwALdWP4EOGi/poc9Tg=="],
+
     "@tailwindcss/node/jiti": ["jiti@2.4.2", "https://registry.npmmirror.com/jiti/-/jiti-2.4.2.tgz", { "bin": { "jiti": "lib/jiti-cli.mjs" } }, "sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A=="],
 
     "@tailwindcss/node/magic-string": ["magic-string@0.30.17", "https://registry.npmmirror.com/magic-string/-/magic-string-0.30.17.tgz", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.0" } }, "sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA=="],
@@ -2150,6 +2154,8 @@
     "npm-registry-fetch/proc-log": ["proc-log@6.0.0", "", {}, "sha512-KG/XsTDN901PNfPfAMmj6N/Ywg9tM+bHK8pAz+27fS4N4Pcr+4zoYBOcGSBu6ceXYNPxkLpa4ohtfxV1XcLAfA=="],
 
     "path-scurry/lru-cache": ["lru-cache@11.2.2", "", {}, "sha512-F9ODfyqML2coTIsQpSkRHnLSZMtkU8Q+mSfcaIyKwy58u+8k5nvAYeiNhsyMARvzNcXJ9QfWVrcPsC9e9rAxtg=="],
+
+    "primeng/@primeuix/styled": ["@primeuix/styled@0.7.0", "https://registry.npmmirror.com/@primeuix/styled/-/styled-0.7.0.tgz", { "dependencies": { "@primeuix/utils": "^0.6.0" } }, "sha512-xUqMdQb75izeDkNWFK1QlU15aUl5LIU97Fq68IXOhrqqLsKEBnj5ftntFZrENQW70jAHwALdWP4EOGi/poc9Tg=="],
 
     "promise-retry/retry": ["retry@0.12.0", "https://registry.npmmirror.com/retry/-/retry-0.12.0.tgz", {}, "sha512-9LkiTwjUh6rT555DtE9rTX+BKByPfrMzEAtnlEtdEwr3Nkffwiihqe2bWADg+OQRjt9gl6ICdmB/ZFDCGAtSow=="],
 
